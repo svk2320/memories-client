@@ -33,7 +33,7 @@ const PostDetails = () => {
       }
   }, [dispatch, post]);
 
-  if (!post) return null;
+  // if (!post) return null;
 
   const openPost = (_id) => history.push(`/posts/${_id}`);
   const recommendedPosts = posts.filter(({ _id }) => _id !== post._id);
