@@ -15,7 +15,6 @@ const PostDetails = () => {
   const history = useHistory();
   const dispatch = useDispatch();
   const { post_id } = useParams();
-  console.log(useParams());
   // eslint-disable-next-line
   const [id, setId] = useState(post_id);
 
