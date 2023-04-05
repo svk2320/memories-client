@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, useHistory, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
@@ -14,11 +14,10 @@ const PostDetails = () => {
   const classes = useStyles();
   const history = useHistory();
   const dispatch = useDispatch();
-  const { id } = useParams();
-
-  useEffect(() => {
-    window.location.reload();
-  }, [])
+  const { post_id } = useParams();
+  console.log(useParams());
+  // eslint-disable-next-line
+  const [id, setId] = useState(post_id);
 
   useEffect(() => {
     dispatch(getPost(id));
@@ -37,7 +36,7 @@ const PostDetails = () => {
       }
   }, [dispatch, post]);
 
-  // if (!post) return null;
+  if (!post) return null;
 
   const openPost = (_id) => history.push(`/posts/${_id}`);
   const recommendedPosts = posts.filter(({ _id }) => _id !== post._id);
