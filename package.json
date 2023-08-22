@@ -25,6 +25,9 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
   },
+  "engines": {
+    "node": "14.x"
+  }
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "set NODE_OPTIONS=--openssl-legacy-provider BUILD_PATH=../server/public && react-scripts build",
