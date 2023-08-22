@@ -27,7 +27,7 @@
   },
   "engines": {
     "node": "14.x"
-  }
+  },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "set NODE_OPTIONS=--openssl-legacy-provider BUILD_PATH=../server/public && react-scripts build",
