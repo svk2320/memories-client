@@ -10,6 +10,8 @@ import PostDetails from "../components/post-details/post-details.component";
 const App = () => {
   const user = JSON.parse(localStorage.getItem("profile"));
 
+  console.log(user);
+
   return (
     <Container maxWidth="xl">
       <Navbar />
